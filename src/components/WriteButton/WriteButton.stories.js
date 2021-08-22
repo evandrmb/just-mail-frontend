@@ -12,7 +12,7 @@ const Template = (args) => <WriteButton {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  onclick: () => {
+  onClick: () => {
     console.log("It's expected to do something");
   },
 };
