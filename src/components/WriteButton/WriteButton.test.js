@@ -10,15 +10,14 @@ describe("WriteButton", () => {
   });
 
   test("Should execute onClick", async () => {
-    let number = 0;
-    const incrementNumber = () => number++;
+    const onClickStub = jest.fn()
 
-    render(<WriteButton onClick={incrementNumber} />);
+    render(<WriteButton onClick={onClickStub} />);
 
     const button = await screen.findByRole("button");
 
     fireEvent.click(button);
-    expect(number).toBe(1);
+    expect(onClickStub).toBeCalled()
   });
 
   test("Should find 'Write' label in button", () => {
