@@ -15,7 +15,7 @@ const StyledWriteButton = styled.button`
   height: 3rem;
   justify-content: center;
   margin: 0 1rem;
-  padding: 0.75rem, 1.25rem, 1.25rempx, 1.25rem;
+  padding: 0.75rem, 1.25rem, 1.25rem, 1.25rem;
   width: 7.8rem;
   outline: none;
 `;
