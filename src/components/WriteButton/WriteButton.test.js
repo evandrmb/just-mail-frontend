@@ -10,14 +10,14 @@ describe("WriteButton", () => {
   });
 
   test("Should execute onClick", async () => {
-    const onClickStub = jest.fn()
+    const onClickStub = jest.fn();
 
     render(<WriteButton onClick={onClickStub} />);
 
     const button = await screen.findByRole("button");
 
     fireEvent.click(button);
-    expect(onClickStub).toBeCalled()
+    expect(onClickStub).toBeCalledTimes(1);
   });
 
   test("Should find 'Write' label in button", () => {
