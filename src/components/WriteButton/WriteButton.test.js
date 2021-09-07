@@ -3,13 +3,13 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import WriteButton from "./WriteButton";
 
 describe("WriteButton", () => {
-  test("Should be a button", () => {
+  test("renders a button", () => {
     render(<WriteButton />);
 
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
 
-  test("Should execute onClick", async () => {
+  test("execute onClick once", async () => {
     const onClickStub = jest.fn();
 
     render(<WriteButton onClick={onClickStub} />);
@@ -20,19 +20,19 @@ describe("WriteButton", () => {
     expect(onClickStub).toBeCalledTimes(1);
   });
 
-  test("Should find 'Write' label in button", () => {
+  test("find 'Write' label in button", () => {
     render(<WriteButton />);
 
     expect(screen.getByText("Write")).toBeInTheDocument();
   });
 
-  test("Should find image", () => {
+  test("find image", () => {
     render(<WriteButton />);
 
     expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
-  test("Should find add.svg as image src", () => {
+  test("find add.svg as image src", () => {
     render(<WriteButton />);
 
     expect(screen.getByAltText("add").src).toBe("http://localhost/add.svg");
