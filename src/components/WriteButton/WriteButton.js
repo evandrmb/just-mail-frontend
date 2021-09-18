@@ -1,8 +1,8 @@
 import StyledWriteButton, { StyledAddImg } from "./styled";
 
-const WriteButton = (props) => {
+const WriteButton = ({onClick}) => {
   return (
-    <StyledWriteButton onClick={props.onClick}>
+    <StyledWriteButton onClick={onClick}>
       <StyledAddImg src="add.svg" alt="add"></StyledAddImg>
       Write
     </StyledWriteButton>
