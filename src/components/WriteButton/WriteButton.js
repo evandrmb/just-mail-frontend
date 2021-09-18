@@ -1,9 +1,10 @@
 import StyledWriteButton, { StyledAddImg } from "./styled";
+import AddIcon from "../icons/add.svg";
 
 const WriteButton = ({onClick}) => {
   return (
     <StyledWriteButton onClick={onClick}>
-      <StyledAddImg src="add.svg" alt="add"></StyledAddImg>
+      <StyledAddImg src={AddIcon} alt="add"/>
       Write
     </StyledWriteButton>
   );
