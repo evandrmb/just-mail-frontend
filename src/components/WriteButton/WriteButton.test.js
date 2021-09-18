@@ -3,14 +3,11 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import WriteButton from "./WriteButton";
 
 describe("WriteButton", () => {
-  
-  
   test("renders a button", () => {
     render(<WriteButton />);
 
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
-
 
   test("finds 'Write' label in button", () => {
     render(<WriteButton />);
@@ -27,7 +24,7 @@ describe("WriteButton", () => {
   test("finds add.svg as image src", () => {
     render(<WriteButton />);
 
-    expect(screen.getByAltText("add").src).toBe("http://localhost/add.svg");
+    expect(screen.getByAltText("add").src).toMatch(/add.svg/);
   });
 
   test("executes onClick once", async () => {
