@@ -1,10 +1,10 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import TextInputField from "./TextInputField";
+import InputField from "./InputField";
 
-describe("TextInputField", () => {
+describe("InputField", () => {
   test("renders a input", () => {
-    render(<TextInputField />);
+    render(<InputField />);
 
     expect(screen.getByRole("textbox")).toBeInTheDocument();
   });
@@ -12,7 +12,7 @@ describe("TextInputField", () => {
   test("finds a label", () => {
     const labelText = "any";
 
-    render(<TextInputField label={labelText} id="email_input_field" />);
+    render(<InputField label={labelText} id="email_input_field" />);
 
     const label = screen.getByLabelText(labelText);
 
@@ -22,7 +22,7 @@ describe("TextInputField", () => {
   test("finds a placeholder", () => {
     const labelText = "any";
 
-    render(<TextInputField label={labelText} />);
+    render(<InputField label={labelText} />);
 
     expect(screen.getByPlaceholderText(labelText)).toBeInTheDocument();
   });
