@@ -1,10 +1,10 @@
 import StyledWriteButton, { StyledAddImg } from "./styled";
-import AddIcon from "../../../public/icons/add.svg";
+// import AddIcon from "../../../public/icons/add.svg";
 
 const WriteButton = ({ onClick }) => {
   return (
     <StyledWriteButton onClick={onClick}>
-      <StyledAddImg src={AddIcon} alt="add" />
+      <StyledAddImg src="icons/add.svg" alt="add" />
       Write
     </StyledWriteButton>
   );

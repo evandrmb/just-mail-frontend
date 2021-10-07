@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-const StyledTextInputField = styled.input`
+const StyledInputField = styled.input`
   border: 1px solid var(--regent-gray);
   box-sizing: border-box;
   border-radius: 6px;
-  height: 2rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
   outline: none;
+  width: 100%;
 
   ::-webkit-input-placeholder {
     color: var(--regent-gray);
@@ -17,11 +19,12 @@ const StyledTextInputField = styled.input`
   }
 `;
 
-export const StyledTextInputFieldContainer = styled.div`
+export const StyledInputFieldContainer = styled.div`
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
 
   :focus-within label {
     color: var(--royal-blue);
@@ -35,4 +38,4 @@ export const StyledLabel = styled.label`
   padding-bottom: 0.875rem;
 `;
 
-export default StyledTextInputField;
+export default StyledInputField;
