@@ -3,7 +3,7 @@ import StyledInputField, {
   StyledInputFieldContainer,
 } from "./styled";
 
-const InputField = ({ type, label, id, required, placeholder }) => {
+const InputField = ({ type, label, id, required, placeholder, onChange }) => {
   return (
     <StyledInputFieldContainer>
       <StyledLabel htmlFor={id}>{label}</StyledLabel>
@@ -12,6 +12,7 @@ const InputField = ({ type, label, id, required, placeholder }) => {
         type={type}
         placeholder={placeholder ?? label}
         required={required}
+        onChange={(event) => onChange(event.target.value)}
       />
     </StyledInputFieldContainer>
   );
