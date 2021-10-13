@@ -10,9 +10,10 @@ export const StyledSignUpView = styled.div`
   width: 100vw;
 
   @media (min-width: 720px) {
-    align-items: center;
-    justify-content: center;
     padding: 5rem;
+  }
+  @media (min-width: 1080px) {
+    padding: 10rem;
   }
 `;
 
